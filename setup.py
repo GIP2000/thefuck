@@ -7,7 +7,7 @@ import fastentrypoints
 
 
 try:
-    if int(pkg_resources.get_distribution("pip").version.split('.')[0]) < 6:
+    if int(pkg_resources.get_distribution("pip3").version.split('.')[0]) < 6:
         print('pip older than 6.0 not supported, please upgrade pip with:\n\n'
               '    pip install -U pip')
         sys.exit(-1)
@@ -31,7 +31,7 @@ elif (3, 0) < version < (3, 5):
           ' ({}.{} detected).'.format(*version))
     sys.exit(-1)
 
-VERSION = '3.30'
+VERSION = '3.31'
 
 install_requires = ['psutil', 'colorama', 'six', 'decorator', 'pyte']
 extras_require = {':python_version<"3.4"': ['pathlib2'],
